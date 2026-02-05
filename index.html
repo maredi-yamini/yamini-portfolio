@@ -8,97 +8,111 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <h2 class="logo">Yamini.</h2>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">Yamini.</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <h4>Hello, It's Me</h4>
-      <h1>Yamini</h1>
-      <h3>And I'm a <span>Software Engineer</span></h3>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h4>Hello, It's Me</h4>
+    <h1>Yamini</h1>
+    <h3>And I'm a <span>Software Engineer</span></h3>
 
-      <p>
-        Computer Science student with hands-on experience in web development,
-        automation, and AI fundamentals. Passionate about building real-world solutions.
-      </p>
-
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/yamini-maredi-0704a2274/" target="_blank">in</a>
-        <a href="https://github.com/maredi-yamini" target="_blank">gh</a>
-      </div>
-
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-
-    <div class="hero-img">
-      <img src="profile.jpeg" alt="Profile">
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <h2>About Me</h2>
-    <p class="section-text">
-      I am a Computer Science student with internship experience in web development and IoT.
-      I enjoy learning new technologies and applying them to solve practical problems.
+    <p>
+      Computer Science student with hands-on experience in web development,
+      automation, and AI fundamentals. Passionate about building real-world solutions.
     </p>
-  </section>
 
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Python</span>
-      <span>SQL</span>
-      <span>Selenium</span>
-      <span>Git & GitHub</span>
-      <span>AI Fundamentals</span>
+    <div class="socials">
+      <a href="https://linkedin.com" target="_blank">in</a>
+      <a href="https://github.com" target="_blank">gh</a>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <h2>Projects</h2>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
 
-    <div class="project-card">
+  <div class="hero-img">
+    <img src="profile.jpeg" alt="Profile">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2>About Me</h2>
+  <p class="section-text">
+    I am a Computer Science student with internship experience in web development and IoT.
+    I enjoy learning new technologies and applying them to solve practical problems.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+    <span>SQL</span>
+    <span>Selenium</span>
+    <span>Git & GitHub</span>
+    <span>AI Fundamentals</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project-card" onclick="openProject('weather')">
+      <img src="weather.png">
       <h3>Weather Detection Web App</h3>
-      <p>Real-time weather application using APIs.</p>
-      <small>HTML • CSS • JavaScript</small>
+      <p>Real-time weather application</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openProject('railway')">
+      <img src="railway.png">
       <h3>Automatic Railway Control System</h3>
-      <p>IoT-based safety system using IR sensors.</p>
-      <small>IoT • Embedded Systems</small>
+      <p>IoT-based railway safety system</p>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" onclick="openProject('competitor')">
+      <img src="competitor.png">
       <h3>Competitor Strategy Tracker</h3>
-      <p>E-commerce competitor analysis with automation.</p>
-      <small>Python • Selenium</small>
+      <p>E-commerce competitor analysis</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>LinkedIn: linkedin.com/in/YOUR-LINKEDIN</p>
-    <p>GitHub: github.com/YOUR-GITHUB</p>
-  </section>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email: yourname@email.com</p>
+  <p>LinkedIn: linkedin.com/in/YOUR-LINKEDIN</p>
+  <p>GitHub: github.com/YOUR-GITHUB</p>
+</section>
 
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProject()">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+    <p><strong>Tech Stack:</strong> <span id="modalTech"></span></p>
+    <a id="modalLink" target="_blank" class="btn">View on GitHub</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
