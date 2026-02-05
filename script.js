@@ -4,7 +4,7 @@ function openProject(project) {
         title: "Weather Detection Web App",
         desc: "Real-time weather app using APIs to display live weather conditions.",
         tech: "HTML, CSS, JavaScript, API",
-        link: "https://github.com/YOUR-GITHUB/weather-app"
+        link: "https://github.com/maredi-yamini/Weather-Detection-App"
       },
       railway: {
         title: "Automatic Railway Control System",
