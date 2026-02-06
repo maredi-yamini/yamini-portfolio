@@ -10,7 +10,7 @@ body {
   color: #fff;
 }
 
-/* NAV */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -19,23 +19,24 @@ body {
   display: flex;
   justify-content: space-between;
   background: #0b0f1a;
+  z-index: 100;
 }
 
 .navbar ul {
+  list-style: none;
   display: flex;
   gap: 25px;
-  list-style: none;
 }
 
 .navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
 /* SECTIONS */
 .section {
   min-height: 100vh;
-  padding: 120px 8%;
+  padding: 130px 8%;
 }
 
 /* HERO */
@@ -47,9 +48,9 @@ body {
 
 .blink-text {
   color: #00f0ff;
-  font-size: 34px;
+  font-size: 36px;
   margin: 20px 0;
-  animation: blink 1.5s infinite;
+  animation: blink 1.4s infinite;
 }
 
 @keyframes blink {
@@ -58,9 +59,8 @@ body {
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 30px;
+  margin-top: 25px;
+  padding: 14px 32px;
   background: #00f0ff;
   color: #000;
   border-radius: 30px;
@@ -73,8 +73,8 @@ body {
   background: #00f0ff;
   border-radius: 20%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   box-shadow: 0 0 40px #00f0ff;
 }
 
@@ -83,20 +83,20 @@ body {
   border-radius: 18%;
 }
 
-/* ABOUT */
+/* ABOUT (FIXED) */
 .about {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 90px;
 }
 
 .about-img img {
-  width: 420px;
-  border-radius: 20px;
+  width: 480px;
+  border-radius: 25px;
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 /* SKILLS */
@@ -123,7 +123,7 @@ body {
   color: #00f0ff;
 }
 
-/* PROJECTS */
+/* PROJECTS (FIXED) */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -138,13 +138,14 @@ body {
   color: white;
 }
 
-.project.center {
-  grid-column: span 1;
-}
-
 .project img {
   width: 100%;
   border-radius: 15px;
+}
+
+.span-2 {
+  grid-column: span 1;
+  justify-self: center;
 }
 
 /* CONTACT */
@@ -157,7 +158,7 @@ body {
 }
 
 .contact h2 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
 .contact p {
@@ -171,6 +172,6 @@ body {
 }
 
 .contact-icons i {
-  font-size: 40px;
+  font-size: 42px;
   color: #00f0ff;
 }
