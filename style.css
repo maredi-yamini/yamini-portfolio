@@ -236,4 +236,22 @@ body {
   color: #00f0ff;
 }
 
+/* ===== PROJECT GRID OVERRIDE (FINAL) ===== */
+
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* Force 2nd row projects to center */
+.project-4 {
+  grid-column: 2 / 3;
+}
+
+.project-5 {
+  grid-column: 3 / 4;
+}
+
+
 
