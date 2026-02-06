@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -12,22 +10,21 @@ body {
   color: #fff;
 }
 
-/* NAVBAR */
+/* NAV */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #0b0f1a;
   padding: 20px 8%;
   display: flex;
   justify-content: space-between;
-  z-index: 100;
+  background: #0b0f1a;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
   gap: 25px;
+  list-style: none;
 }
 
 .navbar a {
@@ -36,9 +33,9 @@ body {
 }
 
 /* SECTIONS */
-.section-full {
+.section {
   min-height: 100vh;
-  padding: 140px 8% 80px;
+  padding: 120px 8%;
 }
 
 /* HERO */
@@ -48,27 +45,24 @@ body {
   justify-content: space-between;
 }
 
-.hero-text h1 {
-  font-size: 52px;
-}
-
 .blink-text {
-  font-size: 38px;
   color: #00f0ff;
-  margin: 20px 0 40px;
-  animation: blinkGlow 1.5s infinite;
+  font-size: 34px;
+  margin: 20px 0;
+  animation: blink 1.5s infinite;
 }
 
-@keyframes blinkGlow {
-  0% { opacity: 1; }
-  50% { opacity: 0.6; }
-  100% { opacity: 1; }
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 .btn {
-  padding: 14px 34px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
   background: #00f0ff;
-  color: black;
+  color: #000;
   border-radius: 30px;
   text-decoration: none;
 }
@@ -81,16 +75,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 40px #00f0ff;
 }
 
 .hero-img img {
   width: 85%;
-  height: 85%;
   border-radius: 18%;
 }
 
 /* ABOUT */
-.about-section {
+.about {
   display: flex;
   align-items: center;
   gap: 80px;
@@ -101,43 +95,32 @@ body {
   border-radius: 20px;
 }
 
-.about-text h2 {
-  font-size: 38px;
-  color: #00f0ff;
-}
-
-.about-text p {
-  font-size: 18px;
+.about-text {
   max-width: 600px;
 }
 
 /* SKILLS */
-.skills-section h2,
-.projects-section h2,
-.contact-section h2 {
+.skills {
   text-align: center;
-  font-size: 40px;
-  color: #00f0ff;
-  margin-bottom: 40px;
 }
 
 .skills-grid {
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  justify-content: center;
 }
 
-.skill-card {
+.skill {
   background: #020617;
   padding: 30px;
   border-radius: 20px;
-  text-align: center;
 }
 
-.skill-card i {
-  font-size: 48px;
+.skill i {
+  font-size: 42px;
   color: #00f0ff;
-  margin-bottom: 10px;
 }
 
 /* PROJECTS */
@@ -147,45 +130,47 @@ body {
   gap: 30px;
 }
 
-.projects-grid .project-card:nth-child(4),
-.projects-grid .project-card:nth-child(5) {
-  grid-column: span 1;
-  justify-self: center;
-}
-
-.project-card {
+.project {
   background: #020617;
   padding: 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.project.center {
+  grid-column: span 1;
+}
+
+.project img {
+  width: 100%;
   border-radius: 15px;
 }
 
-.project-card img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.project-card a {
-  color: #00f0ff;
-  text-decoration: none;
-}
-
 /* CONTACT */
-.contact-section {
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.contact-section p {
-  font-size: 20px;
-  margin-bottom: 30px;
+.contact h2 {
+  font-size: 40px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 15px 0 30px;
 }
 
 .contact-icons {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
-.contact-icons a {
-  font-size: 44px;
+.contact-icons i {
+  font-size: 40px;
   color: #00f0ff;
 }
