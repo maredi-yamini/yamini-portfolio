@@ -9,7 +9,7 @@
 
 body {
   background: #0b0f1a;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* NAVBAR */
@@ -35,17 +35,17 @@ body {
   text-decoration: none;
 }
 
-/* FULL SECTION CONTROL */
+/* SECTION CONTROL */
 .section-full {
   min-height: 100vh;
-  padding: 120px 8% 80px;
+  padding: 130px 8% 80px;
 }
 
 .center-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -61,8 +61,8 @@ body {
 }
 
 .hero-role {
-  font-size: 34px;
-  margin: 15px 0 30px;
+  font-size: 36px;
+  margin: 20px 0 40px; /* space below typing */
 }
 
 .typing {
@@ -71,6 +71,10 @@ body {
 }
 
 /* BUTTON */
+.resume-btn {
+  margin-top: 10px;
+}
+
 .btn {
   padding: 14px 34px;
   background: #00f0ff;
@@ -80,16 +84,17 @@ body {
   font-size: 16px;
 }
 
-/* IMAGE */
+/* HERO IMAGE */
 .hero-img {
-  width: 330px;
-  height: 330px;
+  width: 380px;             /* bigger */
+  height: 380px;
   background: #00f0ff;
   border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 40px #00f0ff;
+  margin-right: 40px;       /* move left */
 }
 
 .hero-img img {
@@ -99,16 +104,27 @@ body {
   border-radius: 18%;
 }
 
-/* HEADINGS */
-h2 {
+/* ABOUT */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-img img {
+  width: 360px;
+  border-radius: 20px;
+}
+
+.about-text h2 {
   color: #00f0ff;
   font-size: 36px;
   margin-bottom: 20px;
 }
 
-.section-text {
-  max-width: 700px;
+.about-text p {
   font-size: 18px;
+  max-width: 600px;
   opacity: 0.9;
 }
 
@@ -123,7 +139,7 @@ h2 {
 
 .skill-card {
   background: #020617;
-  padding: 30px 20px;
+  padding: 30px;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -135,10 +151,6 @@ h2 {
 .skill-card i {
   font-size: 48px;
   color: #00f0ff;
-}
-
-.skill-card span {
-  font-size: 16px;
 }
 
 .skill-card:hover {
@@ -189,21 +201,18 @@ h2 {
   box-shadow: 0 20px 40px rgba(0,240,255,0.3);
 }
 
+
+
 /* CONTACT */
 .contact-icons {
   margin-top: 30px;
   display: flex;
-  gap: 35px;
+  gap: 40px;
 }
 
 .contact-icons a {
-  font-size: 38px;
+  font-size: 42px;
   color: #00f0ff;
-  transition: 0.3s;
-}
-
-.contact-icons a:hover {
-  transform: scale(1.2);
 }
 
 
