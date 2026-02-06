@@ -1,34 +1,37 @@
-function openProject(project) {
-    const data = {
-      weather: {
-        title: "Weather Detection Web App",
-        desc: "Real-time weather app using APIs to display live weather conditions.",
-        tech: "HTML, CSS, JavaScript, API",
-        link: "https://github.com/maredi-yamini/Weather-Detection-App"
-      },
-      railway: {
-        title: "Automatic Railway Control System",
-        desc: "IoT-based safety system using IR sensors to prevent accidents.",
-        tech: "IoT, Embedded Systems",
-        link: "https://github.com/YOUR-GITHUB/railway-project"
-      },
-      competitor: {
-        title: "Competitor Strategy Tracker",
-        desc: "E-commerce competitor analysis using automation with Selenium.",
-        tech: "Python, Selenium",
-        link: "https://github.com/YOUR-GITHUB/competitor-tracker"
-      }
-    };
+const roles = [
+    "Java Developer",
+    "Full Stack Developer"
+  ];
   
-    document.getElementById("modalTitle").innerText = data[project].title;
-    document.getElementById("modalDesc").innerText = data[project].desc;
-    document.getElementById("modalTech").innerText = data[project].tech;
-    document.getElementById("modalLink").href = data[project].link;
+  let index = 0;
+  let charIndex = 0;
+  let currentText = "";
+  let isDeleting = false;
   
-    document.getElementById("projectModal").style.display = "flex";
+  function typeEffect() {
+    const typingSpan = document.querySelector(".typing");
+  
+    if (!isDeleting && charIndex <= roles[index].length) {
+      currentText = roles[index].substring(0, charIndex++);
+    } else if (isDeleting && charIndex >= 0) {
+      currentText = roles[index].substring(0, charIndex--);
+    }
+  
+    typingSpan.textContent = currentText;
+  
+    if (charIndex === roles[index].length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    }
+  
+    if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      index = (index + 1) % roles.length;
+    }
+  
+    setTimeout(typeEffect, isDeleting ? 60 : 120);
   }
   
-  function closeProject() {
-    document.getElementById("projectModal").style.display = "none";
-  }
+  typeEffect();
   
