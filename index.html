@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Yamini | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,24 +20,15 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HOME -->
 <section class="hero" id="home">
   <div class="hero-text">
-    <h4>Hello, It's Me</h4>
-    <h1>Yamini</h1>
-    <h3>And I'm a <span>Software Engineer</span></h3>
+    <h1>Hi, I'm Yamini</h1>
+    <h3>
+      I'm a <span class="typing"></span>
+    </h3>
 
-    <p>
-      Computer Science student with hands-on experience in web development,
-      automation, and AI fundamentals. Passionate about building real-world solutions.
-    </p>
-
-    <div class="socials">
-      <a href="https://linkedin.com" target="_blank">in</a>
-      <a href="https://github.com" target="_blank">gh</a>
-    </div>
-
-    <a href="#contact" class="btn">Contact Me</a>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
   </div>
 
   <div class="hero-img">
@@ -49,23 +40,24 @@
 <section class="section" id="about">
   <h2>About Me</h2>
   <p class="section-text">
-    I am a Computer Science student with internship experience in web development and IoT.
-    I enjoy learning new technologies and applying them to solve practical problems.
+    I am a Computer Science student passionate about building real-world applications.
+    My interests include full stack development, problem solving, automation,
+    and applying technology to healthcare and data-driven solutions.
   </p>
 </section>
 
 <!-- SKILLS -->
 <section class="section" id="skills">
   <h2>Skills</h2>
+
   <div class="skills-grid">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Selenium</span>
-    <span>Git & GitHub</span>
-    <span>AI Fundamentals</span>
+    <div class="skill-card">Java</div>
+    <div class="skill-card">HTML & CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">Python</div>
+    <div class="skill-card">Git</div>
+    <div class="skill-card">Django</div>
+    <div class="skill-card">Jupyter</div>
   </div>
 </section>
 
@@ -74,44 +66,51 @@
   <h2>Projects</h2>
 
   <div class="projects-grid">
-    <div class="project-card" onclick="openProject('weather')">
+
+    <div class="project-card">
       <img src="weather.png">
       <h3>Weather Detection Web App</h3>
-      <p>Real-time weather application</p>
+      <p>Real-time weather application using APIs.</p>
     </div>
 
-    <div class="project-card" onclick="openProject('railway')">
-      <img src="railway.png">
-      <h3>Automatic Railway Control System</h3>
-      <p>IoT-based railway safety system</p>
+    <div class="project-card">
+      <img src="text2img.png">
+      <h3>Text to Image Generation</h3>
+      <p>Image generation using Stable Diffusion.</p>
     </div>
 
-    <div class="project-card" onclick="openProject('competitor')">
-      <img src="competitor.png">
-      <h3>Competitor Strategy Tracker</h3>
-      <p>E-commerce competitor analysis</p>
+    <div class="project-card">
+      <img src="library.png">
+      <h3>Library Management System</h3>
+      <p>Book and user management system.</p>
     </div>
+
+    <div class="project-card">
+      <img src="diabetes.png">
+      <h3>Diabetes Prediction</h3>
+      <p>ML-based prediction system using Django.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="medimind.png">
+      <h3>MediMind</h3>
+      <p>AI-powered healthcare assistance platform.</p>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>Email: yourname@email.com</p>
-  <p>LinkedIn: linkedin.com/in/YOUR-LINKEDIN</p>
-  <p>GitHub: github.com/YOUR-GITHUB</p>
-</section>
+<section class="contact-section" id="contact">
+  <h2>contact.</h2>
+  <p>Get in touch with me via social media or send me an email.</p>
 
-<!-- PROJECT MODAL -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeProject()">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <p id="modalDesc"></p>
-    <p><strong>Tech Stack:</strong> <span id="modalTech"></span></p>
-    <a id="modalLink" target="_blank" class="btn">View on GitHub</a>
+  <div class="contact-icons">
+    <a href="#" class="github">GitHub</a>
+    <a href="#" class="linkedin">LinkedIn</a>
+    <a href="#" class="instagram">Instagram</a>
   </div>
-</div>
+</section>
 
 <script src="script.js"></script>
 </body>
