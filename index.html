@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>Yamini | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Devicon (skill logos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,10 +28,12 @@
 </nav>
 
 <!-- HOME -->
-<section class="hero" id="home">
+<section class="hero section-full" id="home">
   <div class="hero-text">
     <h1>Hi, I'm Yamini</h1>
-    <h3>I’m a <span class="typing"></span></h3>
+    <h3 class="hero-role">
+      <span class="typing"></span>
+    </h3>
 
     <a href="resume.pdf" download class="btn">Download Resume</a>
   </div>
@@ -35,36 +44,65 @@
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
+<section class="section-full center-section" id="about">
   <h2>About Me</h2>
   <p class="section-text">
-    I am a Computer Science student with strong interest in Java and Full Stack Development.
+    I am a Computer Science student with a strong interest in Java and Full Stack Development.
     I enjoy building real-world applications, learning new technologies, and working on
     problem-solving projects related to web, AI, and healthcare.
   </p>
 </section>
 
 <!-- SKILLS -->
-<section class="section" id="skills">
+<section class="section-full center-section" id="skills">
   <h2>Skills</h2>
 
   <div class="skills-grid">
-    <div class="skill-card" data-icon="☕">Java</div>
-    <div class="skill-card" data-icon="🌐">HTML & CSS</div>
-    <div class="skill-card" data-icon="🟨">JavaScript</div>
-    <div class="skill-card" data-icon="🐍">Python</div>
-    <div class="skill-card" data-icon="🔧">Git</div>
-    <div class="skill-card" data-icon="🧩">Django</div>
-    <div class="skill-card" data-icon="📓">Jupyter</div>
+
+    <div class="skill-card">
+      <i class="devicon-java-plain"></i>
+      <span>Java</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-html5-plain"></i>
+      <span>HTML & CSS</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-javascript-plain"></i>
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-python-plain"></i>
+      <span>Python</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-git-plain"></i>
+      <span>Git</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-django-plain"></i>
+      <span>Django</span>
+    </div>
+
+    <div class="skill-card">
+      <i class="devicon-jupyter-plain"></i>
+      <span>Jupyter</span>
+    </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
+<section class="section-full" id="projects">
   <h2>Projects</h2>
 
   <div class="projects-grid">
-
+    <!-- keep your existing project cards here (already good) -->
     <div class="project-card">
       <img src="weather.png">
       <h3>Weather Detection Web App</h3>
@@ -109,19 +147,26 @@
         Learn more →
       </a>
     </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
+<section class="section-full center-section" id="contact">
   <h2>contact.</h2>
-  <p>Get in touch with me via social media or send me an email.</p>
+  <p class="section-text">
+    Get in touch with me via social media or send me an email.
+  </p>
 
   <div class="contact-icons">
-    <a href="https://github.com/maredi-yamini" target="_blank">🐙</a>
-    <a href="https://www.linkedin.com/in/yamini-maredi-0704a2274/" target="_blank">in</a>
-    <a href="https://www.instagram.com/maredi_yamini/" target="_blank">📷</a>
+    <a href="https://github.com/maredi-yamini" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/yamini-maredi-0704a2274/" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.instagram.com/maredi_yamini/" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
   </div>
 </section>
 
