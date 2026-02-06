@@ -62,19 +62,20 @@ body {
 
 .hero-role {
   font-size: 36px;
-  margin: 20px 0 40px; /* space below typing */
+  margin: 20px 0 40px;
 }
 
-.typing {
+.role-animate {
   color: #00f0ff;
-  font-weight: 600;
+  animation: fadeMove 2s infinite alternate;
+}
+
+@keyframes fadeMove {
+  from { opacity: 0.7; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(-6px); }
 }
 
 /* BUTTON */
-.resume-btn {
-  margin-top: 10px;
-}
-
 .btn {
   padding: 14px 34px;
   background: #00f0ff;
@@ -86,15 +87,15 @@ body {
 
 /* HERO IMAGE */
 .hero-img {
-  width: 380px;             /* bigger */
-  height: 380px;
+  width: 400px;
+  height: 400px;
   background: #00f0ff;
   border-radius: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 40px #00f0ff;
-  margin-right: 40px;       /* move left */
+  margin-right: 40px;
 }
 
 .hero-img img {
@@ -108,11 +109,11 @@ body {
 .about-section {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 70px;
 }
 
 .about-img img {
-  width: 360px;
+  width: 380px;
   border-radius: 20px;
 }
 
@@ -153,24 +154,23 @@ body {
   color: #00f0ff;
 }
 
-.skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,240,255,0.3);
-}
-
-/* PROJECTS */
+/* PROJECTS GRID (3 + 2) */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-top: 40px;
+}
+
+.projects-grid .project-card:nth-child(4),
+.projects-grid .project-card:nth-child(5) {
+  grid-column: span 1;
 }
 
 .project-card {
   background: #020617;
   padding: 15px;
   border-radius: 15px;
-  text-align: left;
   transition: 0.4s;
 }
 
@@ -179,29 +179,11 @@ body {
   border-radius: 12px;
 }
 
-.project-card h3 {
-  margin-top: 10px;
-}
-
-.project-card p {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
 .project-card a {
-  display: inline-block;
-  margin-top: 10px;
   color: #00f0ff;
   text-decoration: none;
   font-size: 14px;
 }
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,240,255,0.3);
-}
-
-
 
 /* CONTACT */
 .contact-icons {
@@ -214,5 +196,3 @@ body {
   font-size: 42px;
   color: #00f0ff;
 }
-
-
