@@ -324,6 +324,59 @@ body {
   color: #00f0ff;
 }
 
+/* =========================
+   MOBILE RESPONSIVE FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* HOME SECTION LAYOUT */
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px 60px;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h2 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  /* Resume button spacing */
+  .home-content .btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  /* IMAGE + GLOW FIX */
+  .home-image {
+    margin-top: 40px;
+  }
+
+  .image-bg {
+    width: 220px;
+    height: 300px;
+    border-radius: 40px;
+  }
+
+  .image-bg img {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+  }
+
+}
+
+
 
 
 
