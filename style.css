@@ -67,6 +67,10 @@ body {
   text-decoration: none;
 }
 
+.home .btn {
+  margin-top: 24px;
+}
+
 .hero-img {
   width: 420px;
   height: 420px;
@@ -81,6 +85,30 @@ body {
 .hero-img img {
   width: 85%;
   border-radius: 18%;
+}
+
+/* Glow background */
+.image-bg {
+  box-shadow: 
+    0 0 40px rgba(0, 255, 255, 0.5),
+    0 0 80px rgba(0, 255, 255, 0.35); /* reduced glow */
+}
+
+/* Profile image */
+.image-bg img {
+  position: relative;
+  z-index: 2;
+  filter: brightness(1.05) contrast(1.05); /* makes photo pop */
+}
+
+/* Optional: push glow behind more */
+.image-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 100px rgba(0, 255, 255, 0.4);
+  z-index: 1;
 }
 
 /* ABOUT  */
@@ -375,6 +403,7 @@ body {
   }
 
 }
+
 
 
 
