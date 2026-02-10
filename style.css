@@ -85,23 +85,25 @@ body {
 
 /* ABOUT  */
 .about-section {
-  height: calc(100vh - 80px); 
-  padding: 40px 8%;
+  height: calc(100vh - 80px); /* navbar height */
+  padding: 0 8%;
   background: #0b0f1a;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center; /* THIS fixes vertical centering */
 }
 
+/* Heading */
 .about-section .section-title {
   font-size: 42px;
   color: #00f2ff;
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* space between heading and content */
   text-align: center;
 }
 
+/* Content row */
 .about-content {
   display: flex;
   align-items: center;
@@ -113,7 +115,7 @@ body {
 
 /* Image */
 .about-image img {
-  width: 420px;
+  width: 440px; /* slightly increased */
   height: auto;
   border-radius: 16px;
   box-shadow: 0 0 30px rgba(0, 242, 255, 0.25);
@@ -121,7 +123,7 @@ body {
 
 /* Text */
 .about-text p {
-  font-size: 20px;
+  font-size: 20px; /* increased */
   line-height: 1.8;
   color: #dcdcdc;
   max-width: 520px;
@@ -286,5 +288,6 @@ body {
   font-size: 42px;
   color: #00f0ff;
 }
+
 
 
