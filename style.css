@@ -40,47 +40,66 @@ body {
 }
 
 /* HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.hero .blink-text {
+  margin-bottom: 35px;
 }
 
-.blink-text {
-  color: #00f0ff;
-  font-size: 36px;
-  margin: 20px 0;
-  animation: blink 1.4s infinite;
-}
-
-@keyframes blink {
-  0%,100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-.btn {
+.hero .btn {
   margin-top: 30px;
-  padding: 14px 32px;
-  background: #00f0ff;
-  color: #000;
-  border-radius: 30px;
-  text-decoration: none;
 }
 
+/* HERO IMAGE CONTAINER */
 .hero-img {
   width: 420px;
-  height: 420px;
-  background: #00f0ff;
-  border-radius: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 40px #00f0ff;
+  height: auto;
+  background: transparent;
+  border-radius: 22%;
+  padding: 18px; /* thin glow gap */
+  box-shadow:
+    0 0 12px rgba(0, 240, 255, 0.35),
+    0 0 22px rgba(0, 240, 255, 0.25);
 }
 
+/* IMAGE ITSELF (MAIN FOCUS) */
 .hero-img img {
-  width: 85%;
+  width: 100%;
+  height: auto;
   border-radius: 18%;
+  box-shadow: none;
+  filter: brightness(1.08) contrast(1.1);
+}
+
+/* =========================
+   MOBILE HOME FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blink-text {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .hero .btn {
+    margin-top: 28px;
+    padding: 12px 26px;
+  }
+
+  .hero-img {
+    width: 240px;
+    padding: 12px;
+    margin-top: 35px;
+    box-shadow:
+      0 0 10px rgba(0, 240, 255, 0.3);
+  }
+
+  .hero-img img {
+    border-radius: 16%;
+  }
 }
 
 /* ABOUT  */
@@ -375,6 +394,7 @@ body {
   }
 
 }
+
 
 
 
