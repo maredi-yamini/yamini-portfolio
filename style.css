@@ -478,6 +478,32 @@ body {
   }
 }
 
+/* =========================
+   RESTORE BLINKING ROLE TEXT
+   ========================= */
+
+.blink-text {
+  color: #00f0ff;
+  font-size: 36px;
+  font-weight: 600;
+  animation: blinkRole 1.6s infinite;
+}
+
+/* Smooth blink animation */
+@keyframes blinkRole {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.35; }
+  100% { opacity: 1; }
+}
+
+/* Mobile font adjust */
+@media (max-width: 768px) {
+  .blink-text {
+    font-size: 24px;
+  }
+}
+
+
 
 
 
