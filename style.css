@@ -392,8 +392,92 @@ body {
     height: 160px;
     border-radius: 20px;
   }
-
 }
+
+/* =========================
+   HOME SECTION – FINAL LOCK
+   ========================= */
+
+/* Ensure hero layout stays LEFT text + RIGHT image */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Text area */
+.hero-content {
+  max-width: 520px;
+}
+
+/* Role text spacing */
+.hero .blink-text {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+/* Resume button FIX */
+.hero .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 32px;
+  background: #00f0ff;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* IMAGE CONTAINER – RIGHT SIDE */
+.hero-img {
+  width: 420px;
+  padding: 16px; /* thin glow */
+  border-radius: 22%;
+  background: transparent;
+  box-shadow:
+    0 0 10px rgba(0, 240, 255, 0.35),
+    0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* IMAGE – MAIN FOCUS */
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 18%;
+  filter: brightness(1.08) contrast(1.1);
+}
+
+/* =========================
+   MOBILE HOME FIX ONLY
+   ========================= */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .blink-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .hero .btn {
+    margin-top: 18px;
+  }
+
+  .hero-img {
+    width: 260px;
+    margin-top: 30px;
+    padding: 12px;
+  }
+}
+
 
 
 
